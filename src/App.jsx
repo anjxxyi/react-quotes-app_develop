@@ -5,13 +5,6 @@ import Footer from './components/Footer'
 import Calender from './components/Calender'
 import Quotes from './components/Quotes'
 
-/*
-  1. useState >> 상태관리
-  2. 명언 5개 ~> 5초마다 변경
-  3. 날짜(오늘) 출력
-  4. 반응형 ~> PC/MO ver
-*/
-
 function App() {
   let now = new Date();
   const [month,setMonth] = useState(now.getMonth() + 1); 
@@ -23,12 +16,9 @@ function App() {
     setDate(date);
     setDay(day);
 
-    let timeInerval = setInterval(() => {
-      setDate(date)
-    }, 1000);
+    let timeInerval = setInterval(() => setDate(date), 1000);
     return () => clearInterval(timeInerval);
   }, [date]);
-  // console.log("date : " + month, date, day);
 
   return (
     <div className="App">

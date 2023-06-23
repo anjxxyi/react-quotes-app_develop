@@ -1,4 +1,4 @@
-#root {width:100%; text-align:center; background:url('./media/wallpaper.jpg') center center / cover no-repeat;}
+#root {width:100%; text-align:center; background:url('/media/wallpaper.jpg') center center / cover no-repeat;}
 
 .App {width:100%; max-width:1600px; padding:0 40px; margin:0 auto; text-shadow:0 0 1em rgba(0,0,0,0.5);}
 .App > * {display:flex; flex-direction:column; place-items:stretch; place-content:center; padding:0.5em 0;}

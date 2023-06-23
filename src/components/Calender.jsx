@@ -1,10 +1,6 @@
 import React from 'react'
 
-const Calender = (props) => {
-  const month = props.month;
-  const date = props.date;
-  const day = props.day;
-
+const Calender = ({month, date, day}) => {
   return (
     <div className="calenderSection">
         <div className="todayArea">
