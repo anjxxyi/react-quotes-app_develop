@@ -1,0 +1,55 @@
+#root {width:100%; text-align:center; background:url('./media/wallpaper.jpg') center center / cover no-repeat;}
+
+.App {width:100%; max-width:1600px; padding:0 40px; margin:0 auto; text-shadow:0 0 1em rgba(0,0,0,0.5);}
+.App > * {display:flex; flex-direction:column; place-items:stretch; place-content:center; padding:0.5em 0;}
+
+#Header {height:60px; font-size:0.875em;}
+
+#Container {min-height:calc(100vh - 100px); padding:6% 0 2%; justify-content:space-between;}
+#Container .quotesSection {width:40%; min-width:calc(380px + 10%); text-align:justify; animation:tStyle 5s infinite; margin-left:auto; padding:5%;}
+#Container .quotesSection .text {min-height:40px; margin-bottom:0.375em;  text-align:justify; word-break:break-all;}
+#Container .quotesSection .text.KR {letter-spacing:-0.5px}
+#Container .quotesSection .name {text-align:right; margin-top:1em;}
+#Container .quotesSection .name::before {content:'- ';}
+#Container .calenderSection {display:flex; flex-flow:row nowrap; justify-content:space-between; align-items:center;}
+#Container .calenderSection .todayArea {text-align:left;}
+#Container .calenderSection .todayArea .day {font-size:2.5em; line-height:1; padding:0 0.125em;}
+#Container .calenderSection .todayArea .date {font-size:9em;}
+#Container .calenderSection .btnArea {padding-top:5%;}
+#Container .calenderSection .btnArea button {background:#6495ed; font-weight:bold; padding:1.25em 3em 1em; border-radius:2em; box-shadow:0 0 1em 0 rgba(0,0,0,0.5); transition:all 0.2s ease-in; line-height:1;}
+#Container .calenderSection .btnArea button:hover {background:#5383db;}
+
+#Footer {height:40px; font-size:0.75em; color:rgba(255,255,255,0.6)}
+
+@keyframes tStyle {
+  0% {opacity:0;}
+  15% {opacity:1;}
+  85% {opacity:1;}
+  100% {opacity:0;}
+}
+
+@media (max-width: 768px)  {
+  .App {text-shadow:0 0 1em rgba(0,0,0,0.1);}
+
+  #Container {padding:1em 0; justify-content:space-around;}
+  #Container .quotesSection {order:2; width:70%; min-width:300px; height:200px; margin:0 auto; font-size:1.5em;}
+  #Container .quotesSection .text {min-height:58px; text-align:justify; word-break:break-all;}
+  #Container .calenderSection {order:1; flex-flow:column;}
+  #Container .calenderSection .todayArea {text-align:center;}
+  #Container .calenderSection .todayArea .day {font-size:8vw;}
+  #Container .calenderSection .todayArea .date {font-size:25vw; font-weight:700;}
+  #Container .calenderSection .btnArea {padding-top:1em; font-size:1.25em;}
+}
+
+@media (max-width: 450px)  {
+  #Header {font-size:0.75em;}
+
+  #Container .quotesSection {min-width:100%; height:200px; margin:0 auto; font-size:1.25em;}
+  #Container .quotesSection .text {min-height:auto;}
+  #Container .calenderSection .todayArea .day {font-size:7vw;}
+  #Container .calenderSection .todayArea .date {font-size:25vw; font-weight:700;}
+  #Container .calenderSection .btnArea {padding-top:10%; font-size:1em;}
+  #Container .calenderSection .btnArea button {padding:1.25em 2.5em 1em;}
+
+  #Footer {font-size:1em;}
+}
